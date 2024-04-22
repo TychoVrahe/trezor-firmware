@@ -59,6 +59,7 @@ static void flash_from_sdcard(const flash_area_t* area, uint32_t source,
            "sdcard_read_blocks");
 
     for (uint32_t j = 0; j < (SDCARD_BLOCK_SIZE / FLASH_BLOCK_SIZE); j++) {
+
       ensure(flash_area_write_block(
                  area, i * SDCARD_BLOCK_SIZE + j * FLASH_BLOCK_SIZE,
                  &buf[j * FLASH_BLOCK_WORDS]),

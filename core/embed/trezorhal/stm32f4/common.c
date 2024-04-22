@@ -218,7 +218,6 @@ void collect_hw_entropy(void) {
 // which might be incompatible with the other layers older versions,
 // where this setting might be unknown
 void ensure_compatible_settings(void) {
-  display_finish_actions();
 #ifdef TREZOR_MODEL_T
 #ifdef NEW_RENDERING
   display_set_compatible_settings();
